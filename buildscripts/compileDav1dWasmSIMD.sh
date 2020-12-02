@@ -23,7 +23,8 @@ meson ../../../dav1d \
   -Dbitdepths='["8"]' \
   -Ddefault_library=static \
   -Dfake_atomics=true \
-  --buildtype release && \
+  --buildtype debug && \
+  # --buildtype release && \
 ninja -v && \
 mkdir -p "$dir/build/wasm-simd/root/lib" && \
 cp -p src/libdav1d.a "$dir/build/wasm-simd/root/lib/libdav1d.a" && \
